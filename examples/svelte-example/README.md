@@ -1,9 +1,11 @@
- This example will use Svelte with SvelteKit for routing and server-side rendering (SSR) capabilities.
+Certainly! I'll create the content for the `examples/svelte-example/` directory, demonstrating how to integrate HeadSpace with a Svelte application. This example will use Svelte with SvelteKit for routing and server-side rendering (SSR) capabilities.
+
 Here's the structure and content for each file:
 
-examples/svelte-example/package.json
+1. `examples/svelte-example/package.json`
 
-jsonCopy{
+```json
+{
   "name": "headspace-svelte-example",
   "version": "1.0.0",
   "scripts": {
@@ -21,10 +23,12 @@ jsonCopy{
     "head-space": "^1.0.0"
   }
 }
+```
 
-examples/svelte-example/svelte.config.js
+2. `examples/svelte-example/svelte.config.js`
 
-javascriptCopyimport adapter from '@sveltejs/adapter-auto';
+```javascript
+import adapter from '@sveltejs/adapter-auto';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -34,10 +38,12 @@ const config = {
 };
 
 export default config;
+```
 
-examples/svelte-example/src/app.html
+3. `examples/svelte-example/src/app.html`
 
-htmlCopy<!DOCTYPE html>
+```html
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -48,10 +54,12 @@ htmlCopy<!DOCTYPE html>
     <div id="svelte">%sveltekit.body%</div>
   </body>
 </html>
+```
 
-examples/svelte-example/src/routes/__layout.svelte
+4. `examples/svelte-example/src/routes/__layout.svelte`
 
-svelteCopy<script>
+```svelte
+<script>
   import { HeadSpace } from 'head-space';
   import { setContext } from 'svelte';
 
@@ -67,10 +75,12 @@ svelteCopy<script>
 </nav>
 
 <slot />
+```
 
-examples/svelte-example/src/routes/index.svelte
+5. `examples/svelte-example/src/routes/index.svelte`
 
-svelteCopy<script>
+```svelte
+<script>
   import { getContext } from 'svelte';
   import { useHead } from 'head-space';
 
@@ -91,10 +101,12 @@ svelteCopy<script>
 
 <h1>Welcome to the Home Page</h1>
 <p>This page demonstrates basic HeadSpace usage in a Svelte component.</p>
+```
 
-examples/svelte-example/src/routes/about.svelte
+6. `examples/svelte-example/src/routes/about.svelte`
 
-svelteCopy<script>
+```svelte
+<script>
   import { getContext } from 'svelte';
   import { useHead } from 'head-space';
 
@@ -115,10 +127,12 @@ svelteCopy<script>
 
 <h1>About HeadSpace</h1>
 <p>HeadSpace is a powerful, framework-agnostic library for managing head elements in web applications.</p>
+```
 
-examples/svelte-example/src/routes/blog/[id].svelte
+7. `examples/svelte-example/src/routes/blog/[id].svelte`
 
-svelteCopy<script context="module">
+```svelte
+<script context="module">
   export async function load({ params }) {
     // Simulated API call
     const fetchPost = async (id) => {
@@ -158,10 +172,12 @@ svelteCopy<script context="module">
 
 <h1>{post.title}</h1>
 <p>{post.content}</p>
+```
 
-examples/svelte-example/src/hooks.js
+8. `examples/svelte-example/src/hooks.js`
 
-javascriptCopyimport { HeadSpace } from 'head-space';
+```javascript
+import { HeadSpace } from 'head-space';
 
 export async function handle({ event, resolve }) {
   const headSpace = new HeadSpace();
@@ -181,20 +197,22 @@ export async function handle({ event, resolve }) {
     headers: response.headers
   });
 }
+```
+
 This example demonstrates:
 
-Setting up HeadSpace with Svelte and SvelteKit
-Using Svelte context to make HeadSpace available throughout the application
-Managing head elements (title, meta tags, and links) for different routes
-Dynamic head management based on asynchronously loaded data (in the blog post route)
-Server-side rendering (SSR) support using SvelteKit's hooks
-Reactive head updates using Svelte's reactivity
+1. Setting up HeadSpace with Svelte and SvelteKit
+2. Using Svelte context to make HeadSpace available throughout the application
+3. Managing head elements (title, meta tags, and links) for different routes
+4. Dynamic head management based on asynchronously loaded data (in the blog post route)
+5. Server-side rendering (SSR) support using SvelteKit's hooks
+6. Reactive head updates using Svelte's reactivity
 
 To run this example:
 
-Navigate to the examples/svelte-example/ directory
-Run npm install to install dependencies
-Run npm run dev to start the development server
-Open your browser and visit http://localhost:3000
+1. Navigate to the `examples/svelte-example/` directory
+2. Run `npm install` to install dependencies
+3. Run `npm run dev` to start the development server
+4. Open your browser and visit `http://localhost:3000`
 
 This setup provides a comprehensive demonstration of how HeadSpace can be integrated into a Svelte application with SvelteKit, showcasing its ability to handle dynamic content, route changes, and server-side rendering while managing head elements effectively within the Svelte ecosystem.
