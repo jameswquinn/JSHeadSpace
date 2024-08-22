@@ -1,0 +1,17 @@
+{
+  "name": "headspace-preact-example",
+  "version": "1.0.0",
+  "description": "Example of HeadSpace integration with Preact",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "dependencies": {
+    "head-space": "^1.0.0",
+    "preact": "^10.5.15"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5"
+  }
+}
