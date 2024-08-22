@@ -1,4 +1,4 @@
-Certainly! I'll create the content for the `examples/preact-example/` directory, demonstrating how to integrate HeadSpace with a Preact application. Here's the structure and content for each file:
+This example will include Preact Router for navigation and showcase more advanced usage of HeadSpace.
 
 1. `examples/preact-example/package.json`
 
