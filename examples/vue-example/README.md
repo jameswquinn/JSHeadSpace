@@ -1,4 +1,4 @@
-Certainly! I'll create the content for the `examples/vue-example/` directory, demonstrating how to integrate HeadSpace with a Vue.js application. This example will use Vue 3 with the Composition API and Vue Router for navigation.
+This example will use Vue 3 with the Composition API and Vue Router for navigation.
 
 Here's the structure and content for each file:
 
