@@ -1,0 +1,10 @@
+src/
+tests/
+docs/
+examples/
+.gitignore
+.npmignore
+rollup.config.js
+tsconfig.json
+jest.config.js
+CONTRIBUTING.md
