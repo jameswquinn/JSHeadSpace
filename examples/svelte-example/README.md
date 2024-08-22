@@ -1,4 +1,4 @@
-Certainly! I'll create the content for the `examples/svelte-example/` directory, demonstrating how to integrate HeadSpace with a Svelte application. This example will use Svelte with SvelteKit for routing and server-side rendering (SSR) capabilities.
+This example will use Svelte with SvelteKit for routing and server-side rendering (SSR) capabilities.
 
 Here's the structure and content for each file:
 
